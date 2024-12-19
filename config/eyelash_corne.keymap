@@ -26,7 +26,7 @@
     macros {
         colon_eq: colonn_eq {
             compatible = "zmk,behavior-macro";
-            bindings = <&macro_tap &kp : &pk =>;
+            bindings = <&macro_tap &kp : &kp =>;
         };
     };
 };
