@@ -23,6 +23,26 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 / {
+    macros {
+        colon_eq: colon_eq {
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_tap>, <&kp COLON &kp EQUAL>;
+
+            #binding-cells = <0>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            layers = <2>;
+            bindings = <&colon_eq>;
+        };
+    };
+
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
